@@ -11,6 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class MainCalculatorForm {
     private final Config config;
     private final Calculator calculator;
+    private final Window window;
     private JComboBox vehicleType;
     private JComboBox energy;
     private JComboBox householdCount;
@@ -24,10 +25,12 @@ public class MainCalculatorForm {
     private JLabel householdBonus;
     private JLabel totalScore;
     private JLabel loanRate;
+    private JButton settingsButton;
 
-    public MainCalculatorForm(Config config, Calculator calculator) {
+    public MainCalculatorForm(Config config, Calculator calculator, Window window) {
         this.calculator = calculator;
         this.config = config;
+        this.window = window;
         initComponents();
     }
 
@@ -147,8 +150,6 @@ public class MainCalculatorForm {
         householdBonus = new JLabel();
         totalScore = new JLabel();
         loanRate = new JLabel();
-
-        registerListeners();
     }
 
 
@@ -157,6 +158,7 @@ public class MainCalculatorForm {
      * Should be called after GUI Designer's initialization code.
      */
     private void initComponents() {
+        registerListeners();
         calculator.updateVehicleType(GUIUtils.getComboBoxEntry((String) vehicleType.getSelectedItem(), config.getVehicleTypes()));
         calculator.updateEnergy(GUIUtils.getComboBoxEntry((String) energy.getSelectedItem(), config.getFuelTypes()));
         calculator.updateBuildYear(GUIUtils.getSpinnerEntry((Integer) buildYear.getValue(), config.getVehicleAges()));
@@ -188,6 +190,9 @@ public class MainCalculatorForm {
         householdCount.addActionListener(e -> {
             calculator.updatePassengerBonus(householdCount.getSelectedIndex());
             updateScores();
+        });
+        settingsButton.addActionListener(e -> {
+            window.openSettings();
         });
     }
 

@@ -5,12 +5,12 @@ import io.github.mireole.asynconf2023.backend.data.*;
 import java.util.List;
 
 public class Config {
-    private List<VehicleTypeEntry> vehicleTypes;
-    private List<FuelTypeEntry> fuelTypes;
-    private List<IntervalEntry> kilometersPerYear;
-    private List<YearIntervalEntry> vehicleAges;
-    private List<LoanRateEntry> loanRates;
-    private List<Float> passengers;
+    protected List<VehicleTypeEntry> vehicleTypes;
+    protected List<FuelTypeEntry> fuelTypes;
+    protected List<IntervalEntry> kilometersPerYear;
+    protected List<YearIntervalEntry> vehicleAges;
+    protected List<LoanRateEntry> loanRates;
+    protected List<Float> passengers;
 
     public Config(List<VehicleTypeEntry> vehicleTypes, List<FuelTypeEntry> fuelTypes, List<IntervalEntry> kilometersPerYear, List<YearIntervalEntry> vehicleAges, List<LoanRateEntry> loanRates, List<Float> passengers) {
         this.vehicleTypes = vehicleTypes;
@@ -47,4 +47,9 @@ public class Config {
     public List<Float> getPassengers() {
         return passengers;
     }
+
+    public void save() {
+        ConfigReader.writeConfig(this);
+    }
+
 }

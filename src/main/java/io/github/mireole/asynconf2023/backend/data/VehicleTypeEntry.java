@@ -22,4 +22,16 @@ public class VehicleTypeEntry implements ComboBoxEntry {
         return ecoScore;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getAverageWeight() {
+        return averageWeight;
+    }
+
+    @Override
+    public String toString() {
+        return getVisualName();
+    }
 }

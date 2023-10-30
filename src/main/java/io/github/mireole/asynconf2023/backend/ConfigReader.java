@@ -38,4 +38,14 @@ public class ConfigReader {
             throw new RuntimeException("Could not parse config file: " + e.getMessage());
         }
     }
+
+    public static void writeConfig(Config config) {
+        Gson gson = new Gson();
+        try (FileWriter writer = new FileWriter(CONFIG_PATH)) {
+            gson.toJson(config, writer);
+        } catch (IOException e) {
+            CarLoanCalculator.LOGGER.severe("Could not write config file: " + e.getMessage());
+            throw new RuntimeException("Could not write config file: " + e.getMessage());
+        }
+    }
 }
