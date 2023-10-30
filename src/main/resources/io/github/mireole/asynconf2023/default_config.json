@@ -1,0 +1,138 @@
+{
+  "vehicleTypes": [
+    {
+      "name": "Citadine",
+      "averageWeight": "800-1300kg",
+      "ecoScore": 8
+    },
+    {
+      "name": "Cabriolet",
+      "averageWeight": "1300-2000kg",
+      "ecoScore": 6
+    },
+    {
+      "name": "Berline",
+      "averageWeight": "1300-1800kg",
+      "ecoScore": 6.5
+    },
+    {
+      "name": "SUV / 4x4",
+      "averageWeight": "1500-2500kg",
+      "ecoScore": 4
+    }
+  ],
+  "fuelTypes": [
+    {
+      "name": "Essence",
+      "ecoScore": 5
+    },
+    {
+      "name": "Electrique",
+      "ecoScore": 9
+    },
+    {
+      "name": "Gaz",
+      "ecoScore": 6
+    },
+    {
+      "name": "Diesel",
+      "ecoScore": 4
+    },
+    {
+      "name": "Hybride",
+      "ecoScore": 7
+    }
+  ],
+  "kilometersPerYear": [
+    {
+      "start": 5000,
+      "end": 10000,
+      "ecoScore": 9
+    },
+    {
+      "start": 10000,
+      "end": 15000,
+      "ecoScore": 7
+    },
+    {
+      "start": 15000,
+      "end": 20000,
+      "ecoScore": 5
+    },
+    {
+      "start": 20000,
+      "end": 25000,
+      "ecoScore": 3
+    },
+    {
+      "start": 25000,
+      "end": 30000,
+      "ecoScore": 1
+    }
+  ],
+  "vehicleAges": [
+    {
+      "start": 1960,
+      "end": 1970,
+      "ecoScore": 1
+    },
+    {
+      "start": 1970,
+      "end": 1980,
+      "ecoScore": 2
+    },
+    {
+      "start": 1980,
+      "end": 1990,
+      "ecoScore": 3
+    },
+    {
+      "start": 1990,
+      "end": 2000,
+      "ecoScore": 4
+    },
+    {
+      "start": 2000,
+      "end": 2010,
+      "ecoScore": 5
+    },
+    {
+      "start": 2010,
+      "end": -1,
+      "ecoScore": 7
+    }
+  ],
+  "loanRates": [
+    {
+      "start": 0,
+      "end": 10,
+      "value": 3
+    },
+    {
+      "start": 11,
+      "end": 15,
+      "value": 2.74
+    },
+    {
+      "start": 16,
+      "end": 25,
+      "value": 2.52
+    },
+    {
+      "start": 26,
+      "end": 33,
+      "value": 2.10
+    },
+    {
+      "start": 34,
+      "end": 40,
+      "value": 1.85
+    }
+  ],
+  "passengers": [
+    0.11,
+    -0.17,
+    -0.29,
+    -0.54
+  ]
+}
