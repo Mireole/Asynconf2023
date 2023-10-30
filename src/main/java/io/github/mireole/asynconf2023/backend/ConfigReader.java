@@ -1,4 +1,4 @@
-package io.github.mireole.asynconf2023.backend.data;
+package io.github.mireole.asynconf2023.backend;
 
 import com.google.gson.Gson;
 import io.github.mireole.asynconf2023.CarLoanCalculator;
@@ -6,8 +6,8 @@ import io.github.mireole.asynconf2023.CarLoanCalculator;
 import java.io.*;
 
 public class ConfigReader {
-    // Path to the default config file in resources
-    private static final String DEFAULT_CONFIG_PATH = "../../default_config.json";
+    // Relative path to the default config file in resources
+    private static final String DEFAULT_CONFIG_PATH = "../default_config.json";
     private static final String CONFIG_PATH = "config.json";
 
     public static Config readConfig() {

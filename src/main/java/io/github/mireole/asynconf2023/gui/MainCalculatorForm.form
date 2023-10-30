@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="io.github.mireole.asynconf2023.gui.MainCalculatorForm">
-  <grid id="27dc6" binding="contentPane" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="contentPane" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="586" height="400"/>
@@ -31,6 +31,7 @@
             </constraints>
             <properties>
               <font size="16"/>
+              <labelFor value="91b6"/>
               <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.vehicle_type"/>
             </properties>
           </component>
@@ -59,6 +60,7 @@
             </constraints>
             <properties>
               <font size="16"/>
+              <labelFor value="4b2a5"/>
               <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.energy"/>
             </properties>
           </component>
@@ -76,6 +78,7 @@
             </constraints>
             <properties>
               <font size="16"/>
+              <labelFor value="5d517"/>
               <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.build_year"/>
             </properties>
           </component>
@@ -85,6 +88,7 @@
             </constraints>
             <properties>
               <font size="16"/>
+              <labelFor value="62bde"/>
               <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.kilometers_per_year"/>
             </properties>
           </component>
@@ -94,6 +98,7 @@
             </constraints>
             <properties>
               <font size="16"/>
+              <labelFor value="22dbd"/>
               <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.household_count"/>
             </properties>
           </component>
@@ -127,45 +132,46 @@
             </constraints>
             <properties>
               <font size="12" style="2"/>
+              <labelFor value="62bde"/>
               <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.kilometers_per_year.info"/>
               <verticalAlignment value="1"/>
               <verticalTextPosition value="1"/>
             </properties>
           </component>
-          <component id="5280e" class="javax.swing.JLabel" binding="vehicleTypeScore">
+          <component id="5280e" class="javax.swing.JLabel" binding="vehicleTypeScore" custom-create="true">
             <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font size="16"/>
-              <text value="&quot;?/10&quot;"/>
+              <text value="?/10"/>
             </properties>
           </component>
-          <component id="99f48" class="javax.swing.JLabel" binding="energyScore">
+          <component id="99f48" class="javax.swing.JLabel" binding="energyScore" custom-create="true">
             <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font size="16"/>
-              <text value="&quot;?/10&quot;"/>
+              <text value="?/10"/>
             </properties>
           </component>
-          <component id="53ea9" class="javax.swing.JLabel" binding="buildYearScore">
+          <component id="53ea9" class="javax.swing.JLabel" binding="buildYearScore" custom-create="true">
             <constraints>
-              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font size="16"/>
-              <text value="&quot;?/10&quot;"/>
+              <text value="?/10"/>
             </properties>
           </component>
-          <component id="f25b9" class="javax.swing.JLabel" binding="kilometersScore">
+          <component id="f25b9" class="javax.swing.JLabel" binding="kilometersScore" custom-create="true">
             <constraints>
               <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font size="16"/>
-              <text value="&quot;?/10&quot;"/>
+              <text value="?/10"/>
             </properties>
           </component>
           <component id="a2117" class="javax.swing.JLabel">
@@ -177,7 +183,7 @@
               <text value="Taux d'emprunt"/>
             </properties>
           </component>
-          <component id="2a325" class="javax.swing.JLabel">
+          <component id="2a325" class="javax.swing.JLabel" binding="householdBonus" custom-create="true">
             <constraints>
               <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -186,7 +192,7 @@
               <text value="?"/>
             </properties>
           </component>
-          <component id="55631" class="javax.swing.JLabel">
+          <component id="55631" class="javax.swing.JLabel" binding="totalScore" custom-create="true">
             <constraints>
               <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -195,13 +201,13 @@
               <text value="?/40"/>
             </properties>
           </component>
-          <component id="2f3a" class="javax.swing.JLabel">
+          <component id="2f3a" class="javax.swing.JLabel" binding="loanRate" custom-create="true">
             <constraints>
               <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font size="16" style="1"/>
-              <text value="?"/>
+              <text value=""/>
             </properties>
           </component>
           <vspacer id="748b8">
@@ -212,15 +218,6 @@
             </constraints>
           </vspacer>
         </children>
-      </grid>
-      <grid id="b43e7" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
-        <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties/>
-        <border type="none"/>
-        <children/>
       </grid>
     </children>
   </grid>

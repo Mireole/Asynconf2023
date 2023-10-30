@@ -15,4 +15,8 @@ public class FuelTypeEntry implements ComboBoxEntry {
     public String getVisualName() {
         return name;
     }
+
+    public float getEcoScore() {
+        return ecoScore;
+    }
 }

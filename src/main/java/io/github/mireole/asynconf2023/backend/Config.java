@@ -1,4 +1,6 @@
-package io.github.mireole.asynconf2023.backend.data;
+package io.github.mireole.asynconf2023.backend;
+
+import io.github.mireole.asynconf2023.backend.data.*;
 
 import java.util.List;
 

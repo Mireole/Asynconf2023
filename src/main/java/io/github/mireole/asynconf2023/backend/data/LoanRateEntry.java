@@ -18,8 +18,17 @@ public class LoanRateEntry implements SpinnerEntry {
         return start;
     }
 
+    public float getValue() {
+        return value;
+    }
+
     @Override
     public int getMaxValue() {
         return end;
+    }
+
+    @Override
+    public boolean matches(int value) {
+        return value >= getMinValue() && value <= getMaxValue();
     }
 }

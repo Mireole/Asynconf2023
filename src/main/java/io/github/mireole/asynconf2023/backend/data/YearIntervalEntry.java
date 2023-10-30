@@ -12,8 +12,9 @@ public class YearIntervalEntry extends IntervalEntry{
 
     @Override
     public int getMaxValue() {
-        if (super.getMaxValue() > Year.now().getValue() || super.getMaxValue() == -1) {
-            return Year.now().getValue();
+        // year + 1 in case a car is bought in the current year
+        if (super.getMaxValue() > Year.now().getValue() + 1 || super.getMaxValue() == -1) {
+            return Year.now().getValue() + 1;
         }
         return super.getMaxValue();
     }

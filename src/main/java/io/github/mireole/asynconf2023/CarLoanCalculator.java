@@ -2,8 +2,8 @@ package io.github.mireole.asynconf2023;
 
 
 import com.github.weisj.darklaf.LafManager;
-import io.github.mireole.asynconf2023.backend.data.Config;
-import io.github.mireole.asynconf2023.backend.data.ConfigReader;
+import io.github.mireole.asynconf2023.backend.Config;
+import io.github.mireole.asynconf2023.backend.ConfigReader;
 import io.github.mireole.asynconf2023.gui.Window;
 
 import java.util.logging.Logger;

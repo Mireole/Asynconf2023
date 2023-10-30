@@ -22,4 +22,8 @@ public class IntervalEntry implements SpinnerEntry {
     public int getMaxValue() {
         return end;
     }
+
+    public float getEcoScore() {
+        return ecoScore;
+    }
 }
