@@ -1,6 +1,8 @@
 package io.github.mireole.asynconf2023.backend.data;
 
-public class VehicleTypeEntry {
+import io.github.mireole.asynconf2023.gui.ComboBoxEntry;
+
+public class VehicleTypeEntry implements ComboBoxEntry {
     private final String name;
     private final String averageWeight;
     private final float ecoScore;
@@ -9,6 +11,15 @@ public class VehicleTypeEntry {
         this.name = name;
         this.averageWeight = averageWeight;
         this.ecoScore = ecoScore;
+    }
+
+    // Name used in the combo box
+    public String getVisualName() {
+        return name + " (" + averageWeight + ")";
+    }
+
+    public float getEcoScore() {
+        return ecoScore;
     }
 
 }

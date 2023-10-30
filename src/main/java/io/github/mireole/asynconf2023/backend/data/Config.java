@@ -6,11 +6,11 @@ public class Config {
     private List<VehicleTypeEntry> vehicleTypes;
     private List<FuelTypeEntry> fuelTypes;
     private List<IntervalEntry> kilometersPerYear;
-    private List<IntervalEntry> vehicleAges;
+    private List<YearIntervalEntry> vehicleAges;
     private List<LoanRateEntry> loanRates;
     private List<Float> passengers;
 
-    public Config(List<VehicleTypeEntry> vehicleTypes, List<FuelTypeEntry> fuelTypes, List<IntervalEntry> kilometersPerYear, List<IntervalEntry> vehicleAges, List<LoanRateEntry> loanRates, List<Float> passengers) {
+    public Config(List<VehicleTypeEntry> vehicleTypes, List<FuelTypeEntry> fuelTypes, List<IntervalEntry> kilometersPerYear, List<YearIntervalEntry> vehicleAges, List<LoanRateEntry> loanRates, List<Float> passengers) {
         this.vehicleTypes = vehicleTypes;
         this.fuelTypes = fuelTypes;
         this.kilometersPerYear = kilometersPerYear;
@@ -22,4 +22,27 @@ public class Config {
     public Config() {
     }
 
+    public List<VehicleTypeEntry> getVehicleTypes() {
+        return vehicleTypes;
+    }
+
+    public List<FuelTypeEntry> getFuelTypes() {
+        return fuelTypes;
+    }
+
+    public List<IntervalEntry> getKilometersPerYear() {
+        return kilometersPerYear;
+    }
+
+    public List<YearIntervalEntry> getVehicleAges() {
+        return vehicleAges;
+    }
+
+    public List<LoanRateEntry> getLoanRates() {
+        return loanRates;
+    }
+
+    public List<Float> getPassengers() {
+        return passengers;
+    }
 }

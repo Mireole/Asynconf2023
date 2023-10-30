@@ -1,6 +1,8 @@
 package io.github.mireole.asynconf2023.backend.data;
 
-public class LoanRateEntry {
+import io.github.mireole.asynconf2023.gui.SpinnerEntry;
+
+public class LoanRateEntry implements SpinnerEntry {
     private final int start;
     private final int end;
     private final float value;
@@ -9,5 +11,15 @@ public class LoanRateEntry {
         this.start = start;
         this.end = end;
         this.value = value;
+    }
+
+    @Override
+    public int getMinValue() {
+        return start;
+    }
+
+    @Override
+    public int getMaxValue() {
+        return end;
     }
 }

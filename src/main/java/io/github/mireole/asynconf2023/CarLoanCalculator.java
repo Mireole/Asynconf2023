@@ -12,8 +12,8 @@ public class CarLoanCalculator {
     public static final Logger LOGGER = Logger.getLogger(CarLoanCalculator.class.getName());
     public static void main(String[] args) {
         Config config = ConfigReader.readConfig();
-        // Setup look and feel
-        LafManager.install();
+        // Setup look and feel using system default
+        LafManager.installTheme(LafManager.getPreferredThemeStyle());
         Window window = new Window(config);
 
     }

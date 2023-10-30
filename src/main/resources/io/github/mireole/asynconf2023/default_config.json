@@ -45,28 +45,28 @@
   ],
   "kilometersPerYear": [
     {
-      "start": 5000,
-      "end": 10000,
+      "start": 5,
+      "end": 10,
       "ecoScore": 9
     },
     {
-      "start": 10000,
-      "end": 15000,
+      "start": 10,
+      "end": 15,
       "ecoScore": 7
     },
     {
-      "start": 15000,
-      "end": 20000,
+      "start": 15,
+      "end": 20,
       "ecoScore": 5
     },
     {
-      "start": 20000,
-      "end": 25000,
+      "start": 20,
+      "end": 25,
       "ecoScore": 3
     },
     {
-      "start": 25000,
-      "end": 30000,
+      "start": 25,
+      "end": 30,
       "ecoScore": 1
     }
   ],
