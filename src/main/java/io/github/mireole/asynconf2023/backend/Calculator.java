@@ -4,8 +4,8 @@ import io.github.mireole.asynconf2023.backend.data.*;
 import io.github.mireole.asynconf2023.gui.GUIUtils;
 
 /*
-    * This class is responsible for calculating the different scores and the loan rate
-    * Everything is cached to avoid recalculating everything every time, even though it's not really necessary
+ * This class is responsible for calculating the different scores and the loan rate
+ * Everything is cached to avoid recalculating everything every time, even though it's not really necessary
  */
 public class Calculator {
     private final Config config;
@@ -25,44 +25,40 @@ public class Calculator {
         this.config = config;
     }
 
-    public float updateVehicleType(VehicleTypeEntry vehicleType) {
+    public void updateVehicleType(VehicleTypeEntry vehicleType) {
         if (vehicleType == null) {
             vehicleTypeScore = 0;
         } else {
-            vehicleTypeScore = vehicleType.getEcoScore();
+            vehicleTypeScore = vehicleType.ecoScore();
         }
         updateBaseLoanRate();
-        return vehicleTypeScore;
     }
 
-    public float updateEnergy(FuelTypeEntry fuelType) {
+    public void updateEnergy(FuelTypeEntry fuelType) {
         if (fuelType == null) {
             energyScore = 0;
         } else {
             energyScore = fuelType.getEcoScore();
         }
         updateBaseLoanRate();
-        return energyScore;
     }
 
-    public float updateBuildYear(YearIntervalEntry yearIntervalEntry) {
+    public void updateBuildYear(YearIntervalEntry yearIntervalEntry) {
         if (yearIntervalEntry == null) {
             buildYearScore = 0;
         } else {
             buildYearScore = yearIntervalEntry.getEcoScore();
         }
         updateBaseLoanRate();
-        return buildYearScore;
     }
 
-    public float updateKilometers(IntervalEntry entry) {
+    public void updateKilometers(IntervalEntry entry) {
         if (entry == null) {
             kilometersScore = 0;
         } else {
             kilometersScore = entry.getEcoScore();
         }
         updateBaseLoanRate();
-        return kilometersScore;
     }
 
     private void updateBaseLoanRate() {
@@ -76,14 +72,13 @@ public class Calculator {
         updateLoanRate();
     }
 
-    public float updatePassengerBonus(int i) {
+    public void updatePassengerBonus(int i) {
         if (i > config.getPassengers().size() - 1) {
             passengerBonusMalus = 0;
         } else {
             passengerBonusMalus = config.getPassengers().get(i);
         }
         updateLoanRate();
-        return passengerBonusMalus;
     }
 
     private void updateLoanRate() {

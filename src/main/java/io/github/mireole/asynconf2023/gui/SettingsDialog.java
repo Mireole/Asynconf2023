@@ -2,18 +2,19 @@ package io.github.mireole.asynconf2023.gui;
 
 import com.github.weisj.darklaf.LafManager;
 import io.github.mireole.asynconf2023.backend.Config;
-import io.github.mireole.asynconf2023.backend.TempConfig;
 
 import javax.swing.*;
-import java.awt.event.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class SettingsDialog extends JDialog {
+    private final Config config;
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
     private JButton buttonApply;
     private SettingsForm settingsForm;
-    private final Config config;
 
     public SettingsDialog(JFrame parent, Config config) {
         super(parent, "Paramètres", true);

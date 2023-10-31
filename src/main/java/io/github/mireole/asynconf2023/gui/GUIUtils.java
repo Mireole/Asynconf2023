@@ -10,9 +10,9 @@ public class GUIUtils {
      * Interpolates the color between two given colors based on a given value and its maximum.
      *
      * @param colorStart the start color
-     * @param colorEnd the end color
-     * @param x the value used for interpolation
-     * @param max the maximum value for x
+     * @param colorEnd   the end color
+     * @param x          the value used for interpolation
+     * @param max        the maximum value for x
      * @return the interpolated color
      */
     public static int interpolateColor(int colorStart, int colorEnd, float x, float max) {
@@ -35,7 +35,7 @@ public class GUIUtils {
      * Returns the first ComboBoxEntry object from the given list of entries that matches the provided string.
      * Used to get the ComboBoxEntry object from the selected string in a JComboBox.
      *
-     * @param s      the string to match
+     * @param s       the string to match
      * @param entries the list of ComboBoxEntry objects to search in
      * @return the first ComboBoxEntry object that matches the provided string, or null if no match is found
      */

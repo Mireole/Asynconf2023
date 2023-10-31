@@ -10,6 +10,7 @@ public class Window extends JFrame {
     public static Window INSTANCE;
     public final Config config;
     private final Calculator calculator;
+
     public Window(Config config) {
         super("Calculateur de taux d'emprunt");
         INSTANCE = this;

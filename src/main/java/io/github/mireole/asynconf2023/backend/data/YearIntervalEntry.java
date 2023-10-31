@@ -3,7 +3,7 @@ package io.github.mireole.asynconf2023.backend.data;
 import java.time.Year;
 
 /*
-    * Essentially the same as IntervalEntry, the only difference is that max is capped at the current year
+ * Essentially the same as IntervalEntry, the only difference is that max is capped at the current year
  */
 public class YearIntervalEntry extends IntervalEntry {
     public YearIntervalEntry(int start, int end, float ecoScore) {

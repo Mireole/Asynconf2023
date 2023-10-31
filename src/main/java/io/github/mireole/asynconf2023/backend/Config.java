@@ -11,14 +11,8 @@ public class Config {
     protected List<IntervalEntry> kilometersPerYear;
     protected List<YearIntervalEntry> vehicleAges;
     protected List<LoanRateEntry> loanRates;
-
-    public Themes getTheme() {
-        return theme;
-    }
-
     protected List<Float> passengers;
     protected Themes theme;
-
     public Config(List<VehicleTypeEntry> vehicleTypes, List<FuelTypeEntry> fuelTypes, List<IntervalEntry> kilometersPerYear, List<YearIntervalEntry> vehicleAges, List<LoanRateEntry> loanRates, List<Float> passengers, Themes theme) {
         this.vehicleTypes = vehicleTypes;
         this.fuelTypes = fuelTypes;
@@ -27,6 +21,14 @@ public class Config {
         this.loanRates = loanRates;
         this.passengers = passengers;
         this.theme = theme;
+    }
+
+    public Themes getTheme() {
+        return theme;
+    }
+
+    public void setTheme(Themes selectedItem) {
+        this.theme = selectedItem;
     }
 
     public List<VehicleTypeEntry> getVehicleTypes() {
@@ -55,9 +57,5 @@ public class Config {
 
     public void save() {
         ConfigReader.writeConfig(this);
-    }
-
-    public void setTheme(Themes selectedItem) {
-        this.theme = selectedItem;
     }
 }

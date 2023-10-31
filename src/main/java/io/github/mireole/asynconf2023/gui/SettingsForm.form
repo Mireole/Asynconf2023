@@ -74,7 +74,7 @@
               <grid id="bc62a" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <tabbedpane title="Energies"/>
+                  <tabbedpane title-resource-bundle="io/github/mireole/asynconf2023/properties" title-key="window.settings.tab.energies"/>
                 </constraints>
                 <properties/>
                 <border type="none"/>
@@ -94,7 +94,7 @@
               <grid id="7169" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <tabbedpane title="Kilométrages"/>
+                  <tabbedpane title-resource-bundle="io/github/mireole/asynconf2023/properties" title-key="window.settings.tab.kilometers"/>
                 </constraints>
                 <properties/>
                 <border type="none"/>
@@ -109,7 +109,7 @@
               <grid id="96cef" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <tabbedpane title="Dates"/>
+                  <tabbedpane title-resource-bundle="io/github/mireole/asynconf2023/properties" title-key="window.settings.tab.date"/>
                 </constraints>
                 <properties/>
                 <border type="none"/>
@@ -124,7 +124,7 @@
               <grid id="4fd30" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <tabbedpane title="Taux d'intérêt"/>
+                  <tabbedpane title-resource-bundle="io/github/mireole/asynconf2023/properties" title-key="window.settings.tab.loan_rate"/>
                 </constraints>
                 <properties/>
                 <border type="none"/>
@@ -139,7 +139,7 @@
               <grid id="ed2de" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <tabbedpane title="Malus passagers"/>
+                  <tabbedpane title-resource-bundle="io/github/mireole/asynconf2023/properties" title-key="window.settings.tab.passengers"/>
                 </constraints>
                 <properties/>
                 <border type="none"/>

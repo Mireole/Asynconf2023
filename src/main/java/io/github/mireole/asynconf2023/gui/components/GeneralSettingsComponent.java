@@ -5,6 +5,7 @@ import io.github.mireole.asynconf2023.gui.Themes;
 
 import javax.swing.*;
 
+@SuppressWarnings("rawtypes")
 public class GeneralSettingsComponent {
     private final TempConfig tempConfig;
     private JLabel themeLabel;
@@ -24,9 +25,6 @@ public class GeneralSettingsComponent {
     }
 
     private void createListeners() {
-        theme.addActionListener(e -> {
-            tempConfig.setTheme((Themes) theme.getSelectedItem());
-            tempConfig.setChanged(true);
-        });
+        theme.addActionListener(e -> tempConfig.setTheme((Themes) theme.getSelectedItem()));
     }
 }

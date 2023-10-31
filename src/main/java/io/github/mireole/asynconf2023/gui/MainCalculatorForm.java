@@ -8,16 +8,17 @@ import java.awt.*;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+@SuppressWarnings("rawtypes")
 public class MainCalculatorForm {
     private final Config config;
     private final Calculator calculator;
     private final Window window;
+    JPanel contentPane;
     private JComboBox vehicleType;
     private JComboBox energy;
     private JComboBox householdCount;
     private JSpinner buildYear;
     private JSpinner kilometersPerYear;
-    JPanel contentPane;
     private JLabel vehicleTypeScore;
     private JLabel energyScore;
     private JLabel buildYearScore;
@@ -191,9 +192,7 @@ public class MainCalculatorForm {
             calculator.updatePassengerBonus(householdCount.getSelectedIndex());
             updateScores();
         });
-        settingsButton.addActionListener(e -> {
-            window.openSettings();
-        });
+        settingsButton.addActionListener(e -> window.openSettings());
     }
 
     /**

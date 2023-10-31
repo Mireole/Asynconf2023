@@ -2,6 +2,7 @@ package io.github.mireole.asynconf2023.gui;
 
 public interface SpinnerEntry {
     int getMinValue();
+
     int getMaxValue();
 
     default int getStep() {

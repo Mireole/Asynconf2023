@@ -8,6 +8,7 @@ import java.util.List;
  * A component that displays a list of items and allows the user to add and remove items.
  * It calls the SelectedElementComponent it is given when the user selects, adds or removes an item.
  */
+@SuppressWarnings("rawtypes")
 public class SelectorListComponent<E> {
     private final SelectedElementComponent<E> component;
     private DefaultListModel<E> model;

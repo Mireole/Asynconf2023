@@ -9,6 +9,7 @@ public class RunnableDocumentListener implements DocumentListener {
     public RunnableDocumentListener(Runnable runnable) {
         this.runnable = runnable;
     }
+
     @Override
     public void insertUpdate(DocumentEvent e) {
         runnable.run();

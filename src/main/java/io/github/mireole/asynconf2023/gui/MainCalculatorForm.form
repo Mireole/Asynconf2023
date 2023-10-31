@@ -31,7 +31,7 @@
             </constraints>
             <properties>
               <font size="16"/>
-              <labelFor value="91b6"/>
+              <labelFor value=""/>
               <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.vehicle_type"/>
             </properties>
           </component>
@@ -60,7 +60,7 @@
             </constraints>
             <properties>
               <font size="16"/>
-              <labelFor value="4b2a5"/>
+              <labelFor value=""/>
               <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.energy"/>
             </properties>
           </component>
@@ -78,7 +78,7 @@
             </constraints>
             <properties>
               <font size="16"/>
-              <labelFor value="5d517"/>
+              <labelFor value=""/>
               <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.build_year"/>
             </properties>
           </component>
@@ -88,7 +88,7 @@
             </constraints>
             <properties>
               <font size="16"/>
-              <labelFor value="62bde"/>
+              <labelFor value=""/>
               <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.kilometers_per_year"/>
             </properties>
           </component>
@@ -98,7 +98,7 @@
             </constraints>
             <properties>
               <font size="16"/>
-              <labelFor value="22dbd"/>
+              <labelFor value=""/>
               <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.household_count"/>
             </properties>
           </component>
@@ -132,7 +132,7 @@
             </constraints>
             <properties>
               <font size="12" style="2"/>
-              <labelFor value="62bde"/>
+              <labelFor value=""/>
               <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.kilometers_per_year.info"/>
               <verticalAlignment value="1"/>
               <verticalTextPosition value="1"/>
@@ -180,7 +180,7 @@
             </constraints>
             <properties>
               <font size="16" style="1"/>
-              <text value="Taux d'emprunt"/>
+              <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.loan_rate"/>
             </properties>
           </component>
           <component id="2a325" class="javax.swing.JLabel" binding="householdBonus" custom-create="true">
@@ -225,7 +225,7 @@
               <font size="16" style="2"/>
               <foreground color="-14934081"/>
               <text value="?"/>
-              <toolTipText value="Le type du véhicule que vous souhaitez acheter. Vous pouvez vous aider des indications de poids si vous ne savez pas quel type correspond à votre voiture."/>
+              <toolTipText resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.vehicle_type_tooltip"/>
             </properties>
           </component>
           <component id="efa13" class="javax.swing.JLabel">
@@ -236,7 +236,7 @@
               <font size="16" style="2"/>
               <foreground color="-14934081"/>
               <text value="?"/>
-              <toolTipText value="Le type d'énergie que le véhicule que vous souhaitez acheter consomme."/>
+              <toolTipText resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.energy_type_tooltip"/>
             </properties>
           </component>
           <component id="35b92" class="javax.swing.JLabel">
@@ -247,29 +247,29 @@
               <font size="16" style="2"/>
               <foreground color="-14934081"/>
               <text value="?"/>
-              <toolTipText value="L'année de construction du véhicule que vous souhaitez acheter."/>
+              <toolTipText resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.build_year_tooltip"/>
             </properties>
           </component>
           <component id="b90d1" class="javax.swing.JLabel">
             <constraints>
-              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font size="16" style="2"/>
               <foreground color="-14934081"/>
               <text value="?"/>
-              <toolTipText value="Une estimation de la distance que vous allez parcourir chaque année avec votre véhicule, en milliers de kilomètres par an."/>
+              <toolTipText resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.kilometers_tooltip"/>
             </properties>
           </component>
           <component id="eabed" class="javax.swing.JLabel">
             <constraints>
-              <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <font size="16" style="2"/>
               <foreground color="-14934081"/>
               <text value="?"/>
-              <toolTipText value="Le nombre de personnes qui vont utiliser ce véhicule régulièrement (y être présent sans conduire compte)"/>
+              <toolTipText resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.household_tooltip"/>
             </properties>
           </component>
         </children>
@@ -295,7 +295,7 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Ce calculateur vous permet d'estimer le taux d'emprunt pour l'achat d'un véhicule à partir de ses caractéristiques."/>
+              <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.sub_text_1"/>
             </properties>
           </component>
           <hspacer id="3faeb">
@@ -309,7 +309,7 @@
             </constraints>
             <properties>
               <font style="2"/>
-              <text value="Si vous ne comprenez pas une des caractéristiques demandées, passez votre souris sur le ? correspondant."/>
+              <text resource-bundle="io/github/mireole/asynconf2023/properties" key="window.calculator.sub_text_2"/>
             </properties>
           </component>
         </children>

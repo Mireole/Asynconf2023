@@ -34,11 +34,11 @@ public class VehicleElementComponent extends SelectedElementComponent<VehicleTyp
                 averageWeight.setEnabled(false);
             } else {
                 VehicleTypeEntry entry = getList().get(index);
-                nameInput.setText(entry.getName());
+                nameInput.setText(entry.name());
                 nameInput.setEnabled(true);
-                ecoScoreSpinner.setValue((double) entry.getEcoScore());
+                ecoScoreSpinner.setValue((double) entry.ecoScore());
                 ecoScoreSpinner.setEnabled(true);
-                averageWeight.setText(String.valueOf(entry.getAverageWeight()));
+                averageWeight.setText(String.valueOf(entry.averageWeight()));
                 averageWeight.setEnabled(true);
             }
         });
@@ -61,8 +61,7 @@ public class VehicleElementComponent extends SelectedElementComponent<VehicleTyp
         ecoScoreSpinner = new JSpinner(new SpinnerNumberModel(5.0f, 0.0f, 10.0f, 0.5f));
     }
 
-    @Override
-    protected void addListeners() {
+    private void addListeners() {
         DocumentListener listener = new RunnableDocumentListener(this::onEdit);
         nameInput.getDocument().addDocumentListener(listener);
         averageWeight.getDocument().addDocumentListener(listener);

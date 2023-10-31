@@ -55,8 +55,7 @@ public class EnergyElementComponent extends SelectedElementComponent<FuelTypeEnt
         ecoScoreSpinner = new JSpinner(new SpinnerNumberModel(5.0f, 0.0f, 10.0f, 0.5f));
     }
 
-    @Override
-    protected void addListeners() {
+    private void addListeners() {
         DocumentListener listener = new RunnableDocumentListener(this::onEdit);
 
         nameInput.getDocument().addDocumentListener(listener);

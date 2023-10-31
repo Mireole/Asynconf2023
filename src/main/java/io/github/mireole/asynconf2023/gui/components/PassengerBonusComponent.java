@@ -50,7 +50,7 @@ public class PassengerBonusComponent {
     private void initTable() {
         DefaultTableModel model = (DefaultTableModel) table.getModel();
         for (int i = 0; i < tempConfig.getPassengers().size(); i++) {
-            model.addRow(new Object[]{i + 1, tempConfig.getPassengers().get(i)+""});
+            model.addRow(new Object[]{i + 1, tempConfig.getPassengers().get(i) + ""});
         }
         if (model.getRowCount() == 0) {
             removeRow.setEnabled(false);
@@ -65,13 +65,13 @@ public class PassengerBonusComponent {
 
     private void addRow() {
         DefaultTableModel model = (DefaultTableModel) table.getModel();
-        model.addRow(new Object[]{model.getRowCount() + 1, 0f+""});
+        model.addRow(new Object[]{model.getRowCount() + 1, 0f + ""});
         tempConfig.getPassengers().add(0f);
     }
 
     private void setRow(int index, float value) {
         DefaultTableModel model = (DefaultTableModel) table.getModel();
-        model.setValueAt(value+"", index, 1);
+        model.setValueAt(value + "", index, 1);
         tempConfig.getPassengers().set(index, value);
     }
 
@@ -91,8 +91,7 @@ public class PassengerBonusComponent {
             setRow(row, value);
         } catch (NumberFormatException ignored) {
             setRow(row, tempConfig.getPassengers().get(row));
-        }
-        finally {
+        } finally {
             isUpdating = false;
         }
 

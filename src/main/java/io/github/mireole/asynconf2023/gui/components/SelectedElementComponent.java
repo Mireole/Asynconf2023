@@ -53,6 +53,4 @@ public abstract class SelectedElementComponent<E> {
 
     public abstract List<E> getList();
 
-    abstract protected void addListeners();
-
 }

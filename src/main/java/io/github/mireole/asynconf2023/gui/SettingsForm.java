@@ -9,12 +9,12 @@ import io.github.mireole.asynconf2023.gui.components.*;
 
 import javax.swing.*;
 
+@SuppressWarnings("rawtypes")
 public class SettingsForm {
     private final Config config;
-    private final Window window;
     private final TempConfig tempConfig;
-    private JTabbedPane tabbedPane;
     JPanel contentPane;
+    private JTabbedPane tabbedPane;
     private SelectorListComponent energySelectorListComponent;
     private EnergyElementComponent energyElementComponent;
     private SelectorListComponent vehicleSelectorListComponent;
@@ -25,21 +25,15 @@ public class SettingsForm {
     private PassengerBonusComponent passengerBonusComponent;
     private GeneralSettingsComponent generalSettingsComponent;
 
-    public SettingsForm(Config config, Window window, TempConfig tempConfig) {
+    public SettingsForm(Config config, TempConfig tempConfig) {
         this.config = config;
-        this.window = window;
         this.tempConfig = tempConfig;
-        initComponents();
     }
 
     // This constructor is used by IntelliJ IDEA's GUI designer
     @SuppressWarnings("unused")
     public SettingsForm() {
-        this(Window.INSTANCE.config, Window.INSTANCE, new TempConfig(Window.INSTANCE.config));
-    }
-
-    private void initComponents() {
-
+        this(Window.INSTANCE.config, new TempConfig(Window.INSTANCE.config));
     }
 
     public void save() {
