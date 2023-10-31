@@ -106,27 +106,27 @@
     {
       "start": 0,
       "end": 10,
-      "value": 3
+      "ecoScore": 3
     },
     {
       "start": 11,
       "end": 15,
-      "value": 2.74
+      "ecoScore": 2.74
     },
     {
       "start": 16,
       "end": 25,
-      "value": 2.52
+      "ecoScore": 2.52
     },
     {
       "start": 26,
       "end": 33,
-      "value": 2.10
+      "ecoScore": 2.10
     },
     {
       "start": 34,
       "end": 40,
-      "value": 1.85
+      "ecoScore": 1.85
     }
   ],
   "passengers": [
@@ -134,5 +134,6 @@
     -0.17,
     -0.29,
     -0.54
-  ]
+  ],
+  "theme":"INTELLIJ"
 }

@@ -19,4 +19,9 @@ public class FuelTypeEntry implements ComboBoxEntry {
     public float getEcoScore() {
         return ecoScore;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

@@ -1,5 +1,9 @@
 package io.github.mireole.asynconf2023.gui;
 
+import com.github.weisj.darklaf.LafManager;
+import io.github.mireole.asynconf2023.backend.Config;
+import io.github.mireole.asynconf2023.backend.TempConfig;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -9,9 +13,11 @@ public class SettingsDialog extends JDialog {
     private JButton buttonCancel;
     private JButton buttonApply;
     private SettingsForm settingsForm;
+    private final Config config;
 
-    public SettingsDialog(JFrame parent) {
+    public SettingsDialog(JFrame parent, Config config) {
         super(parent, "Paramètres", true);
+        this.config = config;
         setContentPane(contentPane);
 
         getRootPane().setDefaultButton(buttonOK);
@@ -34,6 +40,10 @@ public class SettingsDialog extends JDialog {
         contentPane.registerKeyboardAction(e -> onCancel(), KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
     }
 
+    public void setMinSize() {
+        this.setMinimumSize(this.getSize());
+    }
+
     private void onOK() {
         onApply();
         dispose();
@@ -45,6 +55,13 @@ public class SettingsDialog extends JDialog {
 
     private void onApply() {
         settingsForm.save();
+        if (config.getTheme().theme != LafManager.getTheme()) {
+            // Reload the look and feel for the main window and the settings window
+            LafManager.setTheme(config.getTheme().theme);
+            LafManager.install();
+            SwingUtilities.updateComponentTreeUI(Window.INSTANCE);
+            SwingUtilities.updateComponentTreeUI(this);
+        }
         // Refresh the calculator
         Window.INSTANCE.reloadCalculator();
     }

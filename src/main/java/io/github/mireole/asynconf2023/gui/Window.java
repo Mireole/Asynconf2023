@@ -4,6 +4,7 @@ import io.github.mireole.asynconf2023.backend.Calculator;
 import io.github.mireole.asynconf2023.backend.Config;
 
 import javax.swing.*;
+import java.util.Objects;
 
 public class Window extends JFrame {
     public static Window INSTANCE;
@@ -14,9 +15,15 @@ public class Window extends JFrame {
         INSTANCE = this;
         this.config = config;
         this.calculator = new Calculator(config);
+        // Icon setup
+        ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource("../calculator.png")));
+        setIconImage(icon.getImage());
         // Window setup
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         reloadCalculator();
+        setMinimumSize(this.getSize());
+        setResizable(false);
+        setLocationRelativeTo(null); // Center the window
         this.setVisible(true);
     }
 
@@ -28,8 +35,10 @@ public class Window extends JFrame {
     }
 
     public void openSettings() {
-        SettingsDialog dialog = new SettingsDialog(this);
+        SettingsDialog dialog = new SettingsDialog(this, config);
         dialog.pack();
+        dialog.setMinSize();
+        dialog.setLocationRelativeTo(this);
         dialog.setVisible(true);
     }
 

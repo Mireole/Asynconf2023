@@ -2,13 +2,22 @@ package io.github.mireole.asynconf2023.backend;
 
 import io.github.mireole.asynconf2023.backend.data.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TempConfig extends Config {
     private final Config c;
-    private boolean changed = false;
+    public boolean changed = false;
     public TempConfig(Config config) {
-        super(config.getVehicleTypes(), config.getFuelTypes(), config.getKilometersPerYear(), config.getVehicleAges(), config.getLoanRates(), config.getPassengers());
+        super(
+                new ArrayList<>(config.getVehicleTypes()),
+                new ArrayList<>(config.getFuelTypes()),
+                new ArrayList<>(config.getKilometersPerYear()),
+                new ArrayList<>(config.getVehicleAges()),
+                new ArrayList<>(config.getLoanRates()),
+                new ArrayList<>(config.getPassengers()),
+                config.theme
+        );
         this.c = config;
     }
 
@@ -23,6 +32,7 @@ public class TempConfig extends Config {
         c.vehicleAges = this.vehicleAges;
         c.loanRates = this.loanRates;
         c.passengers = this.passengers;
+        c.theme = this.theme;
     }
 
     public void setVehicleTypes(List<VehicleTypeEntry> vehicleTypes) {
@@ -52,5 +62,7 @@ public class TempConfig extends Config {
     public void setChanged(boolean changed) {
         this.changed = changed;
     }
+
+
 
 }

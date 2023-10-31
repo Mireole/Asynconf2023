@@ -1,6 +1,7 @@
 package io.github.mireole.asynconf2023.backend;
 
 import io.github.mireole.asynconf2023.backend.data.*;
+import io.github.mireole.asynconf2023.gui.Themes;
 
 import java.util.List;
 
@@ -10,18 +11,22 @@ public class Config {
     protected List<IntervalEntry> kilometersPerYear;
     protected List<YearIntervalEntry> vehicleAges;
     protected List<LoanRateEntry> loanRates;
-    protected List<Float> passengers;
 
-    public Config(List<VehicleTypeEntry> vehicleTypes, List<FuelTypeEntry> fuelTypes, List<IntervalEntry> kilometersPerYear, List<YearIntervalEntry> vehicleAges, List<LoanRateEntry> loanRates, List<Float> passengers) {
+    public Themes getTheme() {
+        return theme;
+    }
+
+    protected List<Float> passengers;
+    protected Themes theme;
+
+    public Config(List<VehicleTypeEntry> vehicleTypes, List<FuelTypeEntry> fuelTypes, List<IntervalEntry> kilometersPerYear, List<YearIntervalEntry> vehicleAges, List<LoanRateEntry> loanRates, List<Float> passengers, Themes theme) {
         this.vehicleTypes = vehicleTypes;
         this.fuelTypes = fuelTypes;
         this.kilometersPerYear = kilometersPerYear;
         this.vehicleAges = vehicleAges;
         this.loanRates = loanRates;
         this.passengers = passengers;
-    }
-
-    public Config() {
+        this.theme = theme;
     }
 
     public List<VehicleTypeEntry> getVehicleTypes() {
@@ -52,4 +57,7 @@ public class Config {
         ConfigReader.writeConfig(this);
     }
 
+    public void setTheme(Themes selectedItem) {
+        this.theme = selectedItem;
+    }
 }

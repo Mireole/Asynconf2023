@@ -107,7 +107,7 @@ public class MainCalculatorForm {
     private float getMinLoanRate() {
         float minLoanRate = Float.MAX_VALUE;
         for (int i = 0; i < config.getLoanRates().size(); i++) {
-            float loanRate = config.getLoanRates().get(i).getValue();
+            float loanRate = config.getLoanRates().get(i).getEcoScore();
             if (loanRate < minLoanRate) {
                 minLoanRate = loanRate;
             }
@@ -118,7 +118,7 @@ public class MainCalculatorForm {
     private float getMaxLoanRate() {
         float maxLoanRate = -Float.MAX_VALUE;
         for (int i = 0; i < config.getLoanRates().size(); i++) {
-            float loanRate = config.getLoanRates().get(i).getValue();
+            float loanRate = config.getLoanRates().get(i).getEcoScore();
             if (loanRate > maxLoanRate) {
                 maxLoanRate = loanRate;
             }

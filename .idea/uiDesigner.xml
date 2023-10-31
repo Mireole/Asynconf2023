@@ -124,7 +124,22 @@
       <item class="io.github.mireole.asynconf2023.gui.SettingsForm" icon="" removable="true" auto-create-binding="false" can-attach-label="false">
         <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
       </item>
-      <item class="io.github.mireole.asynconf2023.gui.components.VehiclesComponent" icon="" removable="true" auto-create-binding="false" can-attach-label="false">
+      <item class="io.github.mireole.asynconf2023.gui.components.SelectorListComponent" icon="" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
+      </item>
+      <item class="io.github.mireole.asynconf2023.gui.components.EnergyElementComponent" icon="" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
+      </item>
+      <item class="io.github.mireole.asynconf2023.gui.components.VehicleElementComponent" icon="" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
+      </item>
+      <item class="io.github.mireole.asynconf2023.gui.components.IntervalsInput" icon="" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
+      </item>
+      <item class="io.github.mireole.asynconf2023.gui.components.PassengerBonusComponent" icon="" removable="true" auto-create-binding="false" can-attach-label="false">
+        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
+      </item>
+      <item class="io.github.mireole.asynconf2023.gui.components.GeneralSettingsComponent" icon="" removable="true" auto-create-binding="false" can-attach-label="false">
         <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="0" />
       </item>
     </group>

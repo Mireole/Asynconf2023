@@ -71,7 +71,7 @@ public class Calculator {
         if (entry == null) {
             baseLoanRate = 0;
         } else {
-            baseLoanRate = entry.getValue();
+            baseLoanRate = entry.getEcoScore();
         }
         updateLoanRate();
     }
@@ -90,8 +90,11 @@ public class Calculator {
         loanRate = baseLoanRate + passengerBonusMalus;
     }
 
+    /**
+     * Returns the loan rate rounded to two decimal places.
+     */
     public float getLoanRate() {
-        return loanRate;
+        return (float) Math.round(loanRate * 100) / 100;
     }
 
     public float getVehicleTypeScore() {
