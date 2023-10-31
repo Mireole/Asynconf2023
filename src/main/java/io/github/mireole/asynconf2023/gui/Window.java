@@ -17,7 +17,7 @@ public class Window extends JFrame {
         this.config = config;
         this.calculator = new Calculator(config);
         // Icon setup
-        ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource("../calculator.png")));
+        ImageIcon icon = new ImageIcon(Objects.requireNonNull(getClass().getResource("/io/github/mireole/asynconf2023/calculator.png")));
         setIconImage(icon.getImage());
         // Window setup
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

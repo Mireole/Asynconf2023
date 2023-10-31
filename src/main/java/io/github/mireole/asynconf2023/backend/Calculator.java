@@ -61,8 +61,20 @@ public class Calculator {
         updateBaseLoanRate();
     }
 
+    /**
+     * Returns the largest smaller integer if the decimal par is <= 5, otherwise the smallest larger integer.
+     */
+    private int customRounding(float f) {
+        int i = (int) f;
+        if (f - i <= 0.5f) {
+            return i;
+        } else {
+            return i + 1;
+        }
+    }
+
     private void updateBaseLoanRate() {
-        totalScore = (int) Math.floor(vehicleTypeScore + energyScore + buildYearScore + kilometersScore);
+        totalScore = customRounding(vehicleTypeScore + energyScore + buildYearScore + kilometersScore);
         LoanRateEntry entry = GUIUtils.getSpinnerEntry((int) totalScore, config.getLoanRates());
         if (entry == null) {
             baseLoanRate = 0;

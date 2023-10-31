@@ -6,8 +6,8 @@ import io.github.mireole.asynconf2023.CarLoanCalculator;
 import java.io.*;
 
 public class ConfigReader {
-    // Relative path to the default config file in resources
-    private static final String DEFAULT_CONFIG_PATH = "../default_config.json";
+    // Changed path to just file name
+    private static final String DEFAULT_CONFIG_PATH = "/io/github/mireole/asynconf2023/default_config.json";
     private static final String CONFIG_PATH = "config.json";
 
     public static Config readConfig() {
@@ -22,6 +22,10 @@ public class ConfigReader {
         }
         // If it does not exist, use the default config file
         try (InputStream is = ConfigReader.class.getResourceAsStream(DEFAULT_CONFIG_PATH)) {
+            // Check if inputStream is null, if null throw an exception
+            if (is == null) {
+                throw new NullPointerException("Could not find default config file");
+            }
             return readConfig(is);
         } catch (IOException e) {
             CarLoanCalculator.LOGGER.severe("Could not read default config file: " + e.getMessage());

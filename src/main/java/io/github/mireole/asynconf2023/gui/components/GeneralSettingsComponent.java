@@ -14,7 +14,6 @@ public class GeneralSettingsComponent {
 
     public GeneralSettingsComponent(TempConfig tempConfig) {
         this.tempConfig = tempConfig;
-        createListeners();
     }
 
     private void createUIComponents() {
@@ -22,6 +21,8 @@ public class GeneralSettingsComponent {
         if (tempConfig.getTheme() != null) {
             theme.setSelectedItem(tempConfig.getTheme());
         }
+
+        createListeners();
     }
 
     private void createListeners() {
